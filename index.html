@@ -12,47 +12,40 @@
     
     <title>LASU Aggregate Score Calculator 2026/2027 | LAMP EDTECH</title>
     
-    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://afolabisamuel.netlify.app/lasu-calculator">
+    <meta property="og:url" content="https://lasu-screening-calculator.netlify.app/">
     <meta property="og:title" content="LASU Aggregate Score Calculator 2026/2027 | Free Online Tool">
     <meta property="og:description" content="Calculate your Lagos State University (LASU) admission aggregate score instantly. Uses the updated screening formula — JAMB × 0.15 + Best 5 O'Level relevant grades. Built by LAMP EDTECH.">
-    <meta property="og:image" content="https://afolabisamuel.netlify.app/lasu-calculator-og.jpg">
+    <meta property="og:image" content="https://lasu-screening-calculator.netlify.app/lasu-calculator-og.jpg">
     <meta property="og:image:alt" content="LASU Aggregate Score Calculator by LAMP EDTECH">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="LAMP EDTECH — LASU Aggregate Calculator">
     <meta property="og:locale" content="en_NG">
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://afolabisamuel.netlify.app/lasu-calculator">
+    <meta name="twitter:url" content="https://lasu-screening-calculator.netlify.app/">
     <meta name="twitter:title" content="LASU Aggregate Score Calculator 2026/2027 | LAMP EDTECH">
     <meta name="twitter:description" content="Instantly compute your LASU admission aggregate score. JAMB × 0.15 + Best 5 O'Level grades. Updated 2026/2027 screening formula.">
-    <meta name="twitter:image" content="https://afolabisamuel.netlify.app/lasu-calculator-og.jpg">
+    <meta name="twitter:image" content="https://lasu-screening-calculator.netlify.app/lasu-calculator-og.jpg">
     <meta name="twitter:image:alt" content="LASU Aggregate Score Calculator interface">
 
-    <!-- Favicon & Icons -->
     <link rel="icon" type="image/svg+xml" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
-    <link rel="canonical" href="https://afolabisamuel.netlify.app/lasu-calculator">
+    <link rel="canonical" href="https://lasu-screening-calculator.netlify.app/">
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "LASU Aggregate Score Calculator",
-      "url": "https://afolabisamuel.netlify.app/lasu-calculator",
+      "url": "https://lasu-screening-calculator.netlify.app/",
       "description": "Calculate your Lagos State University admission aggregate score using the updated 2026/2027 screening formula.",
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "All",
@@ -65,7 +58,7 @@
       "author": {
         "@type": "Person",
         "name": "Afolabi Samuel Oluwaseun",
-        "url": "https://afolabisamuel.netlify.app/",
+        "url": "https://lasu-screening-calculator.netlify.app/",
         "jobTitle": "Full-Stack Developer & Mathematics Educator",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -75,7 +68,7 @@
       "publisher": {
         "@type": "Organization",
         "name": "LAMP EDTECH",
-        "url": "https://afolabisamuel.netlify.app/"
+        "url": "https://lasu-screening-calculator.netlify.app/"
       },
       "about": {
         "@type": "Thing",
@@ -86,7 +79,6 @@
     }
     </script>
 
-    <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,27 +88,24 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://afolabisamuel.netlify.app/"
+          "item": "https://lasu-screening-calculator.netlify.app/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "LASU Aggregate Calculator",
-          "item": "https://afolabisamuel.netlify.app/lasu-calculator"
+          "item": "https://lasu-screening-calculator.netlify.app/"
         }
       ]
     }
     </script>
 </head>
 <body>
-    <!-- Skip to Main Content (Accessibility) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Main Content -->
     <main id="main-content">
         <div class="container">
             
-            <!-- Header -->
             <header class="header">
                 <div class="logo-text" aria-hidden="true">🎓</div>
                 <h1>LASU Aggregate Score Calculator</h1>
@@ -125,7 +114,6 @@
                 JAMB Score × 0.15 + Best 5 Relevant O'Level Subject Points.</p>
             </header>
 
-            <!-- Grade Points Reference Table -->
             <section class="grade-reference" aria-label="O'Level Grade Points Reference">
                 <h2>📊 O'Level Grade Points Reference</h2>
                 <table>
@@ -156,7 +144,6 @@
                 <p class="table-note">Grades D7, E8, and F9 earn 0 points. The system automatically selects your best 5 relevant subjects.</p>
             </section>
 
-            <!-- Course Selection -->
             <section class="form-section">
                 <label for="courseSelect">🎯 Course Applied For</label>
                 <select id="courseSelect" onchange="handleCourseChange()" aria-describedby="courseHint">
@@ -206,7 +193,6 @@
                 <small id="courseHint" class="hint-text" role="status" aria-live="polite"></small>
             </section>
 
-            <!-- JAMB Score -->
             <section class="form-section">
                 <label for="jambScore">✍️ JAMB Score (0 – 400)</label>
                 <input 
@@ -220,14 +206,12 @@
                 <small id="jambHint" class="hint-text">Your JAMB score will be multiplied by 0.15</small>
             </section>
 
-            <!-- O'Level Subjects -->
             <section class="form-section">
                 <label>📚 O'Level Subjects (Minimum 5, up to 9 subjects)</label>
                 <p class="hint-text">Enter your grades for at least 5 subjects. The system will automatically pick your best 5 relevant grades based on your selected course.</p>
                 
                 <div id="subjectsContainer" class="subjects-container" role="group" aria-label="O'Level subjects entry">
-                    <!-- Subject rows will be added dynamically by JavaScript -->
-                </div>
+                    </div>
                 
                 <button type="button" class="add-subject-btn" id="addSubjectBtn" onclick="addSubjectRow()" aria-label="Add another subject row">
                     ➕ Add Another Subject
@@ -235,12 +219,10 @@
                 <small id="subjectCount" class="hint-text" role="status" aria-live="polite">0 subjects added (minimum 5 required)</small>
             </section>
 
-            <!-- Calculate Button -->
             <button class="calculate-btn" onclick="calculateAggregate()" aria-label="Calculate your LASU aggregate score">
                 🧮 Calculate My Aggregate Score
             </button>
 
-            <!-- Result Section -->
             <section id="resultContainer" class="result-container" aria-live="polite" aria-atomic="true">
                 <div class="result-header">
                     <h2>📋 Your LASU Aggregate Result</h2>
@@ -249,15 +231,13 @@
                     <span class="aggregate-number" id="aggregateScore">0.00%</span>
                 </div>
                 <div id="breakdownContainer" class="breakdown-container">
-                    <!-- Breakdown inserted by JavaScript -->
-                </div>
+                    </div>
                 <div class="result-note">
                     <p>⚠️ This is an estimate based on the updated LASU screening formula.</p>
                     <p>Please verify with the <a href="https://lasu.edu.ng" target="_blank" rel="noopener noreferrer">official LASU portal</a>.</p>
                 </div>
             </section>
 
-            <!-- Footer -->
             <footer class="footer">
                 <p><strong>Proudly brought by LAMP EDTECH</strong></p>
                 <p>Developed by <strong>Afolabi Samuel Oluwaseun</strong></p>
@@ -267,7 +247,6 @@
         </div>
     </main>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

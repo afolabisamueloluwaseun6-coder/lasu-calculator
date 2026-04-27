@@ -1,0 +1,20 @@
+# General Rule: Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+
+# Specific Rules for AI Agents (Helpful for AI-driven search)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Link to your sitemap
+Sitemap: https://lasu-screening-calculator.netlify.app/sitemap.xml
