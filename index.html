@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="description" content="LASU Aggregate Score Calculator — Accurately compute your Lagos State University admission screening score using the updated 2026/2027 formula. Built by LAMP EDTECH.">
     <meta name="author" content="Afolabi Samuel Oluwaseun">
     <meta name="robots" content="index, follow">
-    <meta name="google-adsense-account" content="ca-pub-9913793098569697">
     <meta name="keywords" content="LASU aggregate calculator, LASU screening score, LASU admission 2026, Lagos State University aggregate, LASU post UTME calculator, JAMB score calculator, O'Level grading points, LASU cut off mark, LAMP EDTECH, Afolabi Samuel Oluwaseun">
     <meta http-equiv="X-Frame-Options" content="DENY">
     
@@ -33,12 +32,12 @@
     <meta name="twitter:image:alt" content="LASU Aggregate Score Calculator interface">
 
     <!-- Favicon & Icons -->
-    <link rel="icon" type="image/svg+xml" href="logo.png">
-    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
     <link rel="canonical" href="https://lasu-screening-calculator.netlify.app/">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -112,19 +111,6 @@
     <!-- Skip to Main Content (Accessibility) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- AdSense Top Banner (Optional) -->
-    <div class="adsense-banner" style="max-width: 800px; margin: 0 auto 20px; text-align: center; min-height: 90px;">
-        <!-- Google AdSense Code Here -->
-        <!-- <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9913793098569697"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
-        <small style="color: #94a3b8; font-size: 0.7rem;">Advertisement</small>
-    </div>
-
     <!-- Main Content -->
     <main id="main-content">
         <div class="container">
@@ -135,88 +121,55 @@
                 <h1>LASU Aggregate Score Calculator</h1>
                 <p class="subtitle">Lagos State University — New Screening Formula 2026/2027</p>
                 <p class="header-description">Accurately compute your LASU admission aggregate score using the official updated formula. 
-                JAMB Score × 0.15 + Best 5 Relevant O'Level Subject Points.</p>
+                JAMB Score × 0.15 + Best 5 O'Level Subject Points (Manual Entry).</p>
             </header>
 
             <!-- Grade Points Reference Table -->
             <section class="grade-reference" aria-label="O'Level Grade Points Reference">
                 <h2>📊 O'Level Grade Points Reference</h2>
-                <table>
-                    <caption class="sr-only">Grade to Points conversion table for O'Level results</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Grade</th>
-                            <td>A1</td>
-                            <td>B2</td>
-                            <td>B3</td>
-                            <td>C4</td>
-                            <td>C5</td>
-                            <td>C6</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Points</th>
-                            <td>8</td>
-                            <td>7</td>
-                            <td>6</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>3</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="table-note">Grades D7, E8, and F9 earn 0 points. The system automatically selects your best 5 relevant subjects.</p>
+                <div class="table-responsive">
+                    <table>
+                        <caption class="sr-only">Grade to Points conversion table for O'Level results</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Grade</th>
+                                <td>A1</td>
+                                <td>B2</td>
+                                <td>B3</td>
+                                <td>C4</td>
+                                <td>C5</td>
+                                <td>C6</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Points</th>
+                                <td>8</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">Grades D7, E8, and F9 earn 0 points. The system uses your best 5 subjects by points.</p>
             </section>
 
-            <!-- Course Selection -->
+            <!-- Course Selection (Manual Input Only) -->
             <section class="form-section">
-                <label for="courseSelect">🎯 Course Applied For</label>
-                <select id="courseSelect" onchange="handleCourseChange()" aria-describedby="courseHint">
-                    <option value="">— Select from list or type below —</option>
-                    <optgroup label="Faculty of Science">
-                        <option value="Medicine & Surgery">Medicine & Surgery</option>
-                        <option value="Pharmacy">Pharmacy</option>
-                        <option value="Nursing Science">Nursing Science</option>
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Biochemistry">Biochemistry</option>
-                        <option value="Microbiology">Microbiology</option>
-                        <option value="Physics">Physics</option>
-                        <option value="Chemistry">Chemistry</option>
-                    </optgroup>
-                    <optgroup label="Faculty of Engineering">
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
-                        <option value="Electrical Engineering">Electrical Engineering</option>
-                        <option value="Civil Engineering">Civil Engineering</option>
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                    </optgroup>
-                    <optgroup label="Faculty of Law">
-                        <option value="Law">Law (LL.B)</option>
-                    </optgroup>
-                    <optgroup label="Faculty of Management Sciences">
-                        <option value="Accounting">Accounting</option>
-                        <option value="Business Administration">Business Administration</option>
-                        <option value="Banking & Finance">Banking & Finance</option>
-                        <option value="Marketing">Marketing</option>
-                    </optgroup>
-                    <optgroup label="Faculty of Arts & Social Sciences">
-                        <option value="Mass Communication">Mass Communication</option>
-                        <option value="Political Science">Political Science</option>
-                        <option value="Sociology">Sociology</option>
-                        <option value="Economics">Economics</option>
-                        <option value="English Language">English & Literary Studies</option>
-                    </optgroup>
-                    <option value="__other__">🔹 Other (Type manually below)</option>
-                </select>
+                <label for="courseInput">🎯 Course Applied For</label>
                 <input 
                     type="text" 
-                    id="courseManual" 
-                    placeholder="If course not listed, type it here" 
-                    onfocus="handleManualCourseFocus()"
-                    oninput="handleManualCourseInput()"
-                    aria-label="Manual course entry"
+                    id="courseInput" 
+                    placeholder="Type your course (e.g., Medicine & Surgery, Law, Computer Science)" 
+                    autocomplete="off"
+                    aria-describedby="courseHint"
                 >
-                <small id="courseHint" class="hint-text" role="status" aria-live="polite"></small>
+                <small id="courseHint" class="hint-text" role="status" aria-live="polite">
+                    Enter your exact course name — no automatic subject mapping
+                </small>
             </section>
 
             <!-- JAMB Score -->
@@ -236,20 +189,22 @@
             <!-- O'Level Subjects -->
             <section class="form-section">
                 <label>📚 O'Level Subjects (Minimum 5, up to 9 subjects)</label>
-                <p class="hint-text">Enter your grades for at least 5 subjects. The system will automatically pick your best 5 relevant grades based on your selected course.</p>
+                <p class="hint-text">Enter your subjects and grades manually. The system will automatically pick your best 5 subjects by points.</p>
                 
                 <div id="subjectsContainer" class="subjects-container" role="group" aria-label="O'Level subjects entry">
                     <!-- Subject rows will be added dynamically by JavaScript -->
                 </div>
                 
-                <button type="button" class="add-subject-btn" id="addSubjectBtn" onclick="addSubjectRow()" aria-label="Add another subject row">
+                <button type="button" class="add-subject-btn" id="addSubjectBtn" aria-label="Add another subject row">
                     ➕ Add Another Subject
                 </button>
-                <small id="subjectCount" class="hint-text" role="status" aria-live="polite">0 subjects added (minimum 5 required)</small>
+                <small id="subjectCount" class="hint-text subject-count-status" role="status" aria-live="polite">
+                    0 subjects added (minimum 5 required)
+                </small>
             </section>
 
             <!-- Calculate Button -->
-            <button class="calculate-btn" onclick="calculateAggregate()" aria-label="Calculate your LASU aggregate score">
+            <button class="calculate-btn" id="calculateBtn" aria-label="Calculate your LASU aggregate score">
                 🧮 Calculate My Aggregate Score
             </button>
 
@@ -259,7 +214,8 @@
                     <h2>📋 Your LASU Aggregate Result</h2>
                 </div>
                 <div class="aggregate-score-display">
-                    <span class="aggregate-number" id="aggregateScore">0.00%</span>
+                    <span class="aggregate-number" id="aggregateScore">0.00</span>
+                    <span class="aggregate-symbol">%</span>
                 </div>
                 <div id="breakdownContainer" class="breakdown-container">
                     <!-- Breakdown inserted by JavaScript -->
@@ -269,19 +225,6 @@
                     <p>Please verify with the <a href="https://lasu.edu.ng" target="_blank" rel="noopener noreferrer">official LASU portal</a>.</p>
                 </div>
             </section>
-
-            <!-- AdSense After Result (Optional) -->
-            <div class="adsense-inline" style="margin-top: 20px; text-align: center; min-height: 250px;">
-                <!-- Google AdSense Code Here -->
-                <!-- <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-9913793098569697"
-                     data-ad-slot="0987654321"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
-                <small style="color: #94a3b8; font-size: 0.7rem;">Advertisement</small>
-            </div>
 
             <!-- Footer -->
             <footer class="footer">
